@@ -1,39 +1,189 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-Generated Page</title>
+    <title>Gary Pearce Home Services | CCTV, Data Cabling & Alarms UK</title>
+    <meta name="description" content="Expert home services in the UK: CCTV installation, data cabling, alarm systems, and TV aerials. Professional service by Gary Pearce. Call 07830638337 today.">
+    <link rel="canonical" href="https://aiagent1510.github.io/Websites/">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 3rem; border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center; max-width: 600px; }
-        h1 { background: linear-gradient(to right, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem; margin-bottom: 1rem; }
-        p { color: #94a3b8; font-size: 1.2rem; line-height: 1.6; }
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --gold-primary: #fbbf24;
+            --gold-hover: #d97706;
+            --accent-blue: #1e3a8a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        header, footer { background: var(--bg-card); border-bottom: 1px solid rgba(251, 191, 36, 0.3); }
+        
+        /* Typography */
+        h1, h2, h3 { color: var(--gold-primary); font-weight: 700; margin-bottom: 1rem; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        a { text-decoration: none; transition: 0.3s; }
+
+        /* Components */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0f172a 100%);
+            text-align: center;
+            border-bottom: 4px solid var(--gold-primary);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold-primary);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover { background-color: var(--gold-hover); transform: translateY(-2px); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover { transform: translateY(-5px); border-color: var(--gold-primary); }
+        
+        .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
+        /* Contact Section */
+        .contact-section { background: #111; padding: 3rem 0; text-align: center; }
+        .phone-display { font-size: 1.5rem; color: var(--gold-primary); font-weight: bold; margin-bottom: 1rem; display: block;}
+
+        /* Schema visibility helper (optional debug) */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gary Pearce Home Services",
+      "description": "Create a professional business home page for Gary Pearce Home Services. Expertise in CCTV, Data Cabling, Alarms, and TV Aerials. UK based, Phone: 07830638337.",
+      "url": "https://aiagent1510.github.io/Websites/",
+      "telephone": "07830638337",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "image": [
+          "https://aiagent1510.github.io/Websites/cctv-installation.jpg"
+        ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UK"
+      }
+    }
+    </script>
 </head>
 <body>
-    <div class="card">
-        <h1>
-Generate a search-optimized, high-performance "hardwired" HTML page for a Gary Pearce Home Services.
-CORE GOALS:
-- 100/100 Lighthouse SEO Score.
-- Semantic HTML5 structure.
-- Answer Engine Optimization (AEO) oriented.
-- Include a specific section answering common questions in this niche.
 
-JSON-LD Schema to include:
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Gary Pearce Home Services",
-  "description": "Create a professional business home page for Gary Pearce Home Services. Featuring services in Leeds, York, Manchester, Sheffield, Liverpool and beyond. Phone: 07830638337",
-  "url": "https://aiagent1510.github.io/Websites"
-}
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem;">
+                <h2 style="margin:0; color:white;">Gary Pearce Home Services</h2>
+                <nav aria-label="Main Navigation">
+                    <!-- Minimal navigation for SEO -->
+                    <a href="#services" style="color:var(--text-main); margin-left: 1.5rem;">Services</a>
+                    <a href="#contact" style="color:var(--gold-primary); margin-left: 1.5rem;">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-Prompt: Create a professional business home page for Gary Pearce Home Services. Featuring services in Leeds, York, Manchester, Sheffield, Liverpool and beyond. Phone: 07830638337
-    </h1>
-        <p>This page was automatically generated by the Page Foundry using Ollama and pushed to GitHub via OpenClaw automation.</p>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Premium Home Security & Cabling Solutions</h1>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                    Expert installation of CCTV systems, professional data cabling, advanced alarm solutions, and high-definition TV aerials across the UK.
+                </p>
+                <a href="tel:07830638337" class="cta-button">📞 Call Now: 07830638337</a>
+            </div>
+        </section>
+
+        <div class="container" id="services">
+            <h2 style="text-align: center;">Our Core Expertise</h2>
+            
+            <article class="service-card">
+                <span class="icon">📹</span>
+                <h3>CCTV Installation</h3>
+                <p>We install high-definition, weather-resistant security camera systems tailored to your property. Ensure 24/7 monitoring and peace of mind with our robust solutions.</p>
+            </article>
+
+            <article class="service-card">
+                <span class="icon">📡</span>
+                <h3>TV Aerials & Signal</h3>
+                <p>Enjoy crystal clear reception. We handle all types of aerial installations, signal boosting, and fault repairs for digital TV channels.</p>
+            </article>
+
+            <article class="service-card">
+                <span class="icon">🔗</span>
+                <h3>Data Cabling</h3>
+                <p>Professional structured cabling solutions for homes and offices. Fast, reliable internet connections (Cat6/Ethernet) tailored to your infrastructure needs.</p>
+            </article>
+
+            <article class="service-card">
+                <span class="icon">🚨</span>
+                <h3>Alarm Systems</h3>
+                <p>Deter burglars and protect your family with bespoke alarm systems. We cover fire alarms, CO detectors, and comprehensive security panels.</p>
+            </article>
+        </div>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Ready to upgrade your home?</h2>
+                <p>Contact Gary Pearce Home Services today for a free quote or consultation.</p>
+                
+                <div style="background: rgba(255,255,255,0.05); display: inline-block; padding: 1rem 2rem; border-radius: 8px;">
+                    <span class="phone-display">07830638337</span>
+                    <small>Serving the United Kingdom</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 2rem 0; text-align: center; margin-top: auto;">
+        <div class="container">
+            <p style="font-size: 0.9rem;">&copy; <script>document.write(new Date().getFullYear())</script> Gary Pearce Home Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
