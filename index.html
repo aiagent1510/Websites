@@ -1,39 +1,261 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-Generated Page</title>
+    <title>Gary Pearce Home Services | Security & Cabling Experts</title>
+    <meta name="description" content="Professional home services including CCTV cabling, data networking, alarm systems, and digital TV aerial installation.">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 3rem; border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center; max-width: 600px; }
-        h1 { background: linear-gradient(to right, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem; margin-bottom: 1rem; }
-        p { color: #94a3b8; font-size: 1.2rem; line-height: 1.6; }
+        /* CSS Variables for Theme */
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #161b22;
+            --bg-card-hover: #1c2330;
+            --gold-primary: #FFC107;
+            --gold-glow: rgba(255, 193, 7, 0.4);
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset & Base */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+        
+        .text-gold { color: var(--gold-primary); }
+        .uppercase { text-transform: uppercase; }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFC107 0%, #ffaa00 100%);
+            color: var(--bg-dark);
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 17, 21, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--gold-primary); }
+
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--gold-primary); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at top right, rgba(255, 193, 7, 0.08) 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(0,0,0,0.8), var(--bg-dark));
+            padding-top: 70px;
+        }
+
+        .hero-content { max-width: 800px; animation: fadeInUp 1s ease-out; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 20px; background: linear-gradient(to right, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 40px; }
+
+        /* Services Grid */
+        .services-section { padding: 100px 0; background-color: var(--bg-dark); }
+        
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-header p { color: var(--text-muted); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background-color: var(--bg-card-hover);
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+
+        .card-icon {
+            width: 60px; height: 60px; margin: 0 auto 20px;
+            color: var(--gold-primary);
+        }
+
+        .card h3 { font-size: 1.4rem; margin-bottom: 15px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+        
+        /* Footer */
+        footer { border-top: 1px solid var(--border-color); padding: 60px 0; text-align: center; background-color: #0a0b0e; }
+        .contact-info h2 { font-size: 2rem; margin-bottom: 20px; }
+        .phone-number { font-size: 1.8rem; font-weight: 700; color: var(--gold-primary); display: block; margin-bottom: 30px; text-decoration: none; }
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>
-Generate a search-optimized, high-performance "hardwired" HTML page for a Gary Pearce Home Services.
-CORE GOALS:
-- 100/100 Lighthouse SEO Score.
-- Semantic HTML5 structure.
-- Answer Engine Optimization (AEO) oriented.
-- Include a specific section answering common questions in this niche.
 
-JSON-LD Schema to include:
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Gary Pearce Home Services",
-  "description": "Create a professional business home page for Gary Pearce Home Services. Featuring services in Leeds, York, Manchester, Sheffield, Liverpool and beyond. Phone: 07830638337",
-  "url": "https://aiagent1510.github.io/Websites"
-}
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Gary Pearce <span>Home Services</span></a>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-Prompt: Create a professional business home page for Gary Pearce Home Services. Featuring services in Leeds, York, Manchester, Sheffield, Liverpool and beyond. Phone: 07830638337
-    </h1>
-        <p>This page was automatically generated by the Page Foundry using Ollama and pushed to GitHub via OpenClaw automation.</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Premium Home Services & Security</h1>
+            <p>Expert installation of CCTV, data cabling, and alarm systems designed for peace of mind.</p>
+            <a href="tel:07830638337" class="btn">Call Gary Now: 07830638337</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Specialties</h2>
+                <p>Professional, reliable, and high-performance installations.</p>
+            </div>
+
+            <div class="grid">
+                
+                <!-- CCTV Service -->
+                <article class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <h3>CCTV Cabling & Security Cameras</h3>
+                    <p>Full HD security solutions. We handle cabling, installation, and configuration to ensure your property is monitored 24/7 with crystal clear image quality.</p>
+                </article>
+
+                <!-- Data Cabling Service -->
+                <article class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </svg>
+                    <h3>Data Cabling & Networking</h3>
+                    <p>Structured cabling expertise with Cat5/6 cables. Fast, stable home networking ensuring you get the maximum speed from your internet connection.</p>
+                </article>
+
+                <!-- Alarm Systems Service -->
+                <article class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <h3>Residential Alarm Systems</h3>
+                    <p>Safety first. Expert installation of motion sensors and entry detectors tailored to your home layout for optimal coverage.</p>
+                </article>
+
+                <!-- Digital TV Service -->
+                <article class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <h3>Digital TV Aerials</h3>
+                    <p>Crystal clear reception. High-quality aerial installation and signal boosting to ensure you catch all your favorite channels without interference.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container contact-info">
+            <h2>Contact Gary Pearce</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Reliable service for every home. Call today to discuss your project.</p>
+            
+            <a href="tel:07830638337" class="phone-number">07830638337</a>
+            
+            <div style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid #30363d; padding-top: 20px;">
+                &copy; 2023 Gary Pearce Home Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
