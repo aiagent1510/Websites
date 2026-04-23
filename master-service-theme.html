@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCTV Cabling in Leeds | Gary Pearce Home Services</title>
-    <meta name="description" content="Expert CCTV Cabling for home and business owners in Leeds. Professional installation by Gary Pearce.">
+    <title>{{TITLE}} | Gary Pearce Home Services</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -82,41 +82,19 @@
     <nav>
         <div class="container nav-inner">
             <a href="index.html" class="logo">GARY PEARCE</a>
-            
-                        <ul class="nav-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="dropdown">
-                                <a href="#">Services ▾</a>
-                                <div class="dropdown-menu">
-                                    <a href="cctv-cabling-leeds.html">CCTV Systems</a>
-                                    <a href="alarms-leeds.html">Alarm Systems</a>
-                                    <a href="data-cabling-leeds.html">Data Cabling</a>
-                                    <a href="tv-aerials-leeds.html">TV Aerials</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">Areas ▾</a>
-                                <div class="dropdown-menu">
-                                    <a href="cctv-cabling-manchester.html">Manchester</a>
-                                    <a href="cctv-cabling-leeds.html">Leeds</a>
-                                    <a href="cctv-cabling-york.html">York</a>
-                                </div>
-                            </li>
-                            <li><a href="#contact" class="btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
-                        </ul>
-                    
+            {{NAV_LINKS}}
         </div>
     </nav>
 
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>CCTV Cabling <br>Expert in Leeds</h1>
-                <p class="hero-p">Premium CCTV Cabling solutions for discerning property owners in Leeds and surrounding areas.</p>
+                <h1>{{HERO_TITLE}}</h1>
+                <p class="hero-p">{{HERO_SUBTITLE}}</p>
                 <a href="#contact" class="btn">Get a Free Quote</a>
             </div>
             <div class="hero-img-wrap">
-                <img src="./Images/Gary Pearce With Customers/Gary Pearce Installations (10).webp" alt="CCTV Cabling in Leeds by Gary Pearce">
+                <img src="{{HERO_IMG}}" alt="{{TITLE}} by Gary Pearce">
             </div>
         </div>
     </header>
@@ -124,24 +102,24 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Professional CCTV Cabling Services</h2>
-                <p>Top-tier installations in Leeds and surrounding areas.</p>
+                <h2>Professional {{SERVICE}} Services</h2>
+                <p>Top-tier installations in {{CITY}} and surrounding areas.</p>
             </div>
             <div class="grid">
                 <div class="card">
-                    <img src="./Images/CCTV/CCTV Camera Installation Service by Hardwire.uk.webp" alt="CCTV Cabling Detail 1">
+                    <img src="{{IMG_1}}" alt="{{SERVICE}} Detail 1">
                     <h3>Expert Installation</h3>
-                    <p>Our expert team ensures every CCTV Cabling installation in Leeds is performed to the highest industry standards.</p>
+                    <p>{{CONTENT_1}}</p>
                 </div>
                 <div class="card">
-                    <img src="./Images/CCTV/CCTV Installation service by Gary Pearce.webp" alt="CCTV Cabling Detail 2">
+                    <img src="{{IMG_2}}" alt="{{SERVICE}} Detail 2">
                     <h3>Clean & Discreet</h3>
-                    <p>We pride ourselves on clean, discreet wiring and state-of-the-art equipment that blends into your property.</p>
+                    <p>{{CONTENT_2}}</p>
                 </div>
                 <div class="card">
-                    <img src="./Images/CCTV/Gary Pearce Installations (12).webp" alt="CCTV Cabling Detail 3">
+                    <img src="{{IMG_3}}" alt="{{SERVICE}} Detail 3">
                     <h3>5-Year Warranty</h3>
-                    <p>Every project comes with a comprehensive 5-year warranty and lifetime support from Gary Pearce.</p>
+                    <p>{{CONTENT_3}}</p>
                 </div>
             </div>
         </div>
@@ -150,13 +128,13 @@
     <section class="section local-section">
         <div class="container split-grid">
             <div class="split-img-wrap">
-                <img src="./Images/CCTV/Gary Pearce Installations (16).webp" alt="Local CCTV Cabling in Leeds">
+                <img src="{{LOCAL_IMG}}" alt="Local {{SERVICE}} in {{CITY}}">
             </div>
             <div class="split-content">
-                <h2>Local Trust in Leeds</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">With a deep understanding of Leeds's unique security challenges, including Shoplifting in city centre areas, we provide tailored solutions that use Smart door locks adoption at 65% to keep you safe.</p>
-                <p style="color: var(--gold); font-weight: 800;">Areas Covered: Headingley, Roundhay, Moortown</p>
-                <p style="color: var(--gray); margin-top: 1rem;">Landmarks we serve near: Leeds Town Hall, Park Square Gardens, Cross Gates Shopping Centre</p>
+                <h2>Local Trust in {{CITY}}</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">{{LOCAL_CONTENT}}</p>
+                <p style="color: var(--gold); font-weight: 800;">Areas Covered: {{AREAS}}</p>
+                <p style="color: var(--gray); margin-top: 1rem;">Landmarks we serve near: {{LANDMARKS}}</p>
             </div>
         </div>
     </section>
@@ -168,16 +146,16 @@
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">How long does a CCTV Cabling installation take? <span>+</span></div>
-                    <div class="faq-content">Most installations in Leeds are completed within a single day, depending on the complexity of your property.</div>
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">{{FAQ_Q1}} <span>+</span></div>
+                    <div class="faq-content">{{FAQ_A1}}</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Do you provide a warranty? <span>+</span></div>
-                    <div class="faq-content">Yes, all our CCTV Cabling work in Leeds is backed by a full 5-year parts and labor warranty.</div>
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">{{FAQ_Q2}} <span>+</span></div>
+                    <div class="faq-content">{{FAQ_A2}}</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Can I monitor my system remotely? <span>+</span></div>
-                    <div class="faq-content">Absolutely. We integrate Smart door locks adoption at 65% which allows full control and monitoring from your smartphone or tablet.</div>
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">{{FAQ_Q3}} <span>+</span></div>
+                    <div class="faq-content">{{FAQ_A3}}</div>
                 </div>
             </div>
         </div>
@@ -186,10 +164,10 @@
     <footer id="contact">
         <div class="container">
             <a href="index.html" class="footer-logo">GARY PEARCE</a>
-            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">07770 476 455</p>
-            <p style="margin-bottom: 3rem; color: var(--gray);">info@hardwire.uk | Manchester, United Kingdom</p>
+            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">{{PHONE}}</p>
+            <p style="margin-bottom: 3rem; color: var(--gray);">{{EMAIL}} | {{ADDRESS}}</p>
             <div class="copyright">
-                &copy; 2026 Gary Pearce Home Services. Professional Installations in Leeds.
+                &copy; 2026 Gary Pearce Home Services. Professional Installations in {{CITY}}.
                 <br>
                 <a href="sitemap.xml" style="color: var(--gray); text-decoration: none; font-size: 0.8rem; margin-top: 1rem; display: inline-block;">Sitemap</a>
             </div>

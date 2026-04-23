@@ -3,272 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gary Pearce Home Services | CCTV, Data Cabling & Alarms UK</title>
-    <meta name="description" content="Expert home services in the UK: CCTV installation, professional data cabling, bespoke alarm systems, and high-definition TV aerials. Professional service by Gary Pearce. Call 07770 476 455 today for a free quote.">
-    <meta name="keywords" content="CCTV installation UK, data cabling services, home alarm systems, TV aerial installation, Gary Pearce Home Services, security camera setup, Manchester cabling, Leeds CCTV, York alarm systems">
-    <link rel="canonical" href="https://aiagent1510.github.io/Websites/">
+    <title>Gary Pearce Home Services | Premium Security & Connectivity UK</title>
+    <meta name="description" content="Expert home security and connectivity solutions by Gary Pearce. Bespoke CCTV, Data Cabling, and Alarm Systems across Manchester, Leeds, and York. Call 07770 476 455.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --text-main: #f8fafc;
-            --gold-primary: #fbbf24;
+            --gold: #f59e0b;
             --gold-hover: #d97706;
-            --accent-blue: #1e3a8a;
+            --navy: #0f172a;
+            --dark: #020617;
+            --gray: #64748b;
+            --text-light: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --radius: 12px;
+            --container: 1200px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
 
         /* Navigation */
-        nav {
-            background: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(245, 158, 11, 0.2); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); text-decoration: none; font-size: 1.5rem; letter-spacing: -1px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Dropdown */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: #0f172a; 
+            border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; 
+            min-width: 200px; display: none; padding: 1rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 0.5rem 1.5rem; }
+        .dropdown-menu a:hover { background: rgba(245,158,11,0.1); }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+        /* Hero */
+        .hero { padding: 12rem 0 8rem; background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 50%); text-align: center; }
+        h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5rem); line-height: 1; margin-bottom: 2rem; color: var(--gold); }
+        .hero p { font-size: 1.5rem; color: var(--gray); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        .logo { font-weight: 800; font-size: 1.2rem; color: var(--gold-primary); letter-spacing: 1px; }
+        /* Services Grid */
+        .section { padding: 8rem 0; }
+        .section-header { text-align: center; margin-bottom: 5rem; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 3rem 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05); text-align: center; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .card:hover { transform: translateY(-15px); border-color: var(--gold); background: rgba(30, 41, 59, 0.9); }
+        .icon { font-size: 4rem; margin-bottom: 2rem; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold); font-family: 'Montserrat', sans-serif; }
 
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        /* Areas Section */
+        .areas { background: var(--navy); }
+        .area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
+        .area-col h3 { margin-bottom: 2rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; display: inline-block; }
+        .area-links { list-style: none; }
+        .area-links li { margin-bottom: 1rem; }
+        .area-links a { color: var(--gray); text-decoration: none; transition: 0.3s; }
+        .area-links a:hover { color: var(--gold); padding-left: 10px; }
 
-        .dropdown { position: relative; }
-        .dropdown-toggle { color: var(--text-main); font-weight: 500; cursor: pointer; padding: 1.5rem 0; text-decoration: none; display: inline-block; transition: 0.3s; }
-        .dropdown-toggle:hover { color: var(--gold-primary); }
+        /* CTA */
+        .cta-btn { display: inline-block; padding: 1.5rem 3rem; background: var(--gold); color: var(--navy); font-weight: 900; text-decoration: none; border-radius: 50px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .cta-btn:hover { background: #fff; transform: scale(1.05); box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3); }
 
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--bg-card);
-            min-width: 220px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: 0.3s ease;
-            list-style: none;
-            padding: 0.75rem 0;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-menu li a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .dropdown-menu li a:hover {
-            background: rgba(251, 191, 36, 0.1);
-            color: var(--gold-primary);
-            padding-left: 1.75rem;
-        }
-
-        /* Hero & Layout */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        
-        h1, h2, h3 { color: var(--gold-primary); font-weight: 700; margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; color: #cbd5e1; }
-
-        .hero {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, var(--bg-dark) 0%, #1e293b 100%);
-            text-align: center;
-            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
-        }
-
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--gold-primary);
-            color: var(--bg-dark);
-            padding: 1.25rem 2.5rem;
-            font-weight: 800;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            margin-top: 2rem;
-            text-decoration: none;
-            transition: 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover { background-color: var(--gold-hover); transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.3); }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin: 5rem 0;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
-        }
-
-        .service-card:hover { transform: translateY(-10px); border-color: var(--gold-primary); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); }
-        
-        .icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; }
-
-        .areas-serve { padding: 6rem 0; background: #0f172a; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-        .areas-serve h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
-        .areas-serve ul { list-style: none; padding-top: 1.5rem; text-align: left; }
-        .areas-serve li { margin-bottom: 0.75rem; }
-        .areas-serve a { color: #94a3b8; font-size: 1rem; transition: 0.3s; }
-        .areas-serve a:hover { color: var(--gold-primary); text-decoration: underline; padding-left: 5px; }
-
-        .contact-section { background: #070b14; padding: 5rem 0; text-align: center; }
-        .phone-display { font-size: 2.5rem; color: var(--gold-primary); font-weight: 900; margin-bottom: 1rem; display: block; text-decoration: none; }
-
-        footer { background: #020617; padding: 3rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        /* Footer */
+        footer { padding: 6rem 0; background: #010409; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .phone { font-size: 2.5rem; font-weight: 900; color: var(--gold); text-decoration: none; display: block; margin-bottom: 1rem; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 3rem; }
+            .area-grid { grid-template-columns: 1fr; gap: 2rem; }
+            h1 { font-size: 3.5rem; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-container">
-            <div class="logo">GARY PEARCE</div>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">GARY PEARCE</a>
             <ul class="nav-links">
-                <li><a href="index.html" class="dropdown-toggle">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <span class="dropdown-toggle">All Services ▾</span>
-                    <ul class="dropdown-menu">
-                        <li><a href="cctv-cabling-manchester.html">CCTV Cabling</a></li>
-                        <li><a href="alarms-manchester.html">Alarm Services</a></li>
-                        <li><a href="data-cabling-manchester.html">Data Cabling</a></li>
-                        <li><a href="tv-aerials-manchester.html">TV Aerials</a></li>
-                    </ul>
+                    <a href="#">Services ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="cctv-cabling-manchester.html">CCTV Systems</a>
+                        <a href="alarms-manchester.html">Alarm Systems</a>
+                        <a href="data-cabling-manchester.html">Data Cabling</a>
+                        <a href="tv-aerials-manchester.html">TV Aerials</a>
+                    </div>
                 </li>
                 <li class="dropdown">
-                    <span class="dropdown-toggle">Areas Covered ▾</span>
-                    <ul class="dropdown-menu">
-                        <li><a href="cctv-cabling-manchester.html">Manchester</a></li>
-                        <li><a href="cctv-cabling-leeds.html">Leeds</a></li>
-                        <li><a href="cctv-cabling-york.html">York</a></li>
-                    </ul>
+                    <a href="#">Areas ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="cctv-cabling-manchester.html">Manchester</a>
+                        <a href="cctv-cabling-leeds.html">Leeds</a>
+                        <a href="cctv-cabling-york.html">York</a>
+                    </div>
                 </li>
-                <li><a href="#contact" class="dropdown-toggle">Contact</a></li>
+                <li><a href="#contact" class="cta-btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Premium Security & Connectivity for Your Home</h1>
-            <p>Bespoke CCTV, Data Cabling, and Alarm Systems across Manchester, Leeds, and York.</p>
-            <a href="tel:07770476455" class="cta-button">Get a Free Quote</a>
+            <h1>Elite Security <br>& Connectivity</h1>
+            <p>High-end CCTV, Data Cabling, and Intelligent Alarm Systems. Masterfully installed by Gary Pearce across Northern England.</p>
+            <a href="tel:07770476455" class="cta-btn">Call Now: 07770 476 455</a>
         </div>
     </header>
 
-    <main class="container">
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="icon">🛡️</span>
-                <h3>CCTV Systems</h3>
-                <p>High-definition surveillance solutions with remote mobile access.</p>
-            </div>
-            <div class="service-card">
-                <span class="icon">🚨</span>
-                <h3>Alarm Systems</h3>
-                <p>Smart intruder detection systems tailored to your property.</p>
-            </div>
-            <div class="service-card">
-                <span class="icon">🔌</span>
-                <h3>Data Cabling</h3>
-                <p>Cat6/Cat7 structured cabling for seamless home networking.</p>
-            </div>
-            <div class="service-card">
-                <span class="icon">📡</span>
-                <h3>TV Aerials</h3>
-                <p>Professional installation and signal optimization services.</p>
-            </div>
-        </div>
-
-        <section class="areas-serve">
-            <h2>Areas We Serve</h2>
-            <div class="services-grid" style="margin-top: 0;">
-                <div class="service-card">
-                    <h3>Manchester</h3>
-                    <ul>
-                        <li><a href="cctv-cabling-manchester.html">CCTV Cabling Manchester</a></li>
-                        <li><a href="alarms-manchester.html">Alarm Services Manchester</a></li>
-                        <li><a href="data-cabling-manchester.html">Data Cabling Manchester</a></li>
-                        <li><a href="tv-aerials-manchester.html">TV Aerials Manchester</a></li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Leeds</h3>
-                    <ul>
-                        <li><a href="cctv-cabling-leeds.html">CCTV Cabling Leeds</a></li>
-                        <li><a href="alarms-leeds.html">Alarm Services Leeds</a></li>
-                        <li><a href="data-cabling-leeds.html">Data Cabling Leeds</a></li>
-                        <li><a href="tv-aerials-leeds.html">TV Aerials Leeds</a></li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>York</h3>
-                    <ul>
-                        <li><a href="cctv-cabling-york.html">CCTV Cabling York</a></li>
-                        <li><a href="alarms-york.html">Alarm Services York</a></li>
-                        <li><a href="data-cabling-york.html">Data Cabling York</a></li>
-                        <li><a href="tv-aerials-york.html">TV Aerials York</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <section id="contact" class="contact-section">
+    <section class="section">
         <div class="container">
-            <h2>Direct Expert Support</h2>
-            <p>Speak directly with Gary for advice or a free site survey.</p>
-            <a href="tel:07770476455" class="phone-display">07770 476 455</a>
-            <p>Email: info@hardwire.uk</p>
+            <div class="section-header">
+                <h2>Bespoke Solutions</h2>
+                <p>Engineering excellence for your home and business.</p>
+            </div>
+            <div class="grid">
+                <a href="cctv-cabling-manchester.html" class="card">
+                    <span class="icon">🛡️</span>
+                    <h3>CCTV Systems</h3>
+                    <p>4K UHD Surveillance with AI human detection and remote monitoring.</p>
+                </a>
+                <a href="alarms-manchester.html" class="card">
+                    <span class="icon">🚨</span>
+                    <h3>Smart Alarms</h3>
+                    <p>Grade 2/3 security systems with immediate smartphone alerts.</p>
+                </a>
+                <a href="data-cabling-manchester.html" class="card">
+                    <span class="icon">🔌</span>
+                    <h3>Data Cabling</h3>
+                    <p>Cat6a/Cat7 structured cabling for lightning-fast networking.</p>
+                </a>
+                <a href="tv-aerials-manchester.html" class="card">
+                    <span class="icon">📡</span>
+                    <h3>TV & Satellite</h3>
+                    <p>Perfect signal optimization and professional wall mounting.</p>
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <section class="section areas">
         <div class="container">
-            <p>&copy; 2026 Gary Pearce Home Services. Professional Installations in Manchester, Leeds & York.</p>
-            <p style="font-size: 0.8rem; margin-top: 1rem;"><a href="sitemap.xml" style="color: #64748b;">Sitemap</a></p>
+            <div class="section-header">
+                <h2>Service Areas</h2>
+                <p>Serving the finest properties across the North.</p>
+            </div>
+            <div class="area-grid">
+                <div class="area-col">
+                    <h3>Manchester</h3>
+                    <ul class="area-links">
+                        <li><a href="cctv-cabling-manchester.html">CCTV Cabling</a></li>
+                        <li><a href="alarms-manchester.html">Alarm Services</a></li>
+                        <li><a href="data-cabling-manchester.html">Data Cabling</a></li>
+                        <li><a href="tv-aerials-manchester.html">TV Aerials</a></li>
+                    </ul>
+                </div>
+                <div class="area-col">
+                    <h3>Leeds</h3>
+                    <ul class="area-links">
+                        <li><a href="cctv-cabling-leeds.html">CCTV Cabling</a></li>
+                        <li><a href="alarms-leeds.html">Alarm Services</a></li>
+                        <li><a href="data-cabling-leeds.html">Data Cabling</a></li>
+                        <li><a href="tv-aerials-leeds.html">TV Aerials</a></li>
+                    </ul>
+                </div>
+                <div class="area-col">
+                    <h3>York</h3>
+                    <ul class="area-links">
+                        <li><a href="cctv-cabling-york.html">CCTV Cabling</a></li>
+                        <li><a href="alarms-york.html">Alarm Services</a></li>
+                        <li><a href="data-cabling-york.html">Data Cabling</a></li>
+                        <li><a href="tv-aerials-york.html">TV Aerials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Start Your Project</h2>
+            <p style="margin-bottom: 2rem;">Speak directly to Gary Pearce for an expert consultation.</p>
+            <a href="tel:07770476455" class="phone">07770 476 455</a>
+            <p>info@hardwire.uk | Available 24/7 for Emergencies</p>
+            <div style="margin-top: 4rem; color: var(--gray); font-size: 0.9rem;">
+                &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
+                <br>
+                <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>
+            </div>
         </div>
     </footer>
 </body>
