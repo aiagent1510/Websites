@@ -30,9 +30,21 @@
         nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(245, 158, 11, 0.2); }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); text-decoration: none; font-size: 1.5rem; letter-spacing: -1px; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
+
+        /* Dropdown */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: #0f172a; 
+            border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; 
+            min-width: 200px; display: none; padding: 1rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 0.5rem 1.5rem; }
+        .dropdown-menu a:hover { background: rgba(245,158,11,0.1); }
 
         /* Hero Section */
         .hero { position: relative; padding: 10rem 0 6rem; background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 60%); }
@@ -97,7 +109,7 @@
                                     <a href="wifi-extensions-manchester.html">Manchester</a><a href="wifi-extensions-leeds.html">Leeds</a><a href="wifi-extensions-york.html">York</a><a href="wifi-extensions-blackburn.html">Blackburn</a><a href="wifi-extensions-blackpool.html">Blackpool</a><a href="wifi-extensions-bradford.html">Bradford</a><a href="wifi-extensions-bolton.html">Bolton</a><a href="wifi-extensions-chester.html">Chester</a><a href="wifi-extensions-crewe.html">Crewe</a><a href="wifi-extensions-darlington.html">Darlington</a><a href="wifi-extensions-doncaster.html">Doncaster</a><a href="wifi-extensions-huddersfield.html">Huddersfield</a><a href="wifi-extensions-harrogate.html">Harrogate</a><a href="wifi-extensions-hull.html">Hull</a><a href="wifi-extensions-halifax.html">Halifax</a><a href="wifi-extensions-liverpool.html">Liverpool</a><a href="wifi-extensions-lincoln.html">Lincoln</a><a href="wifi-extensions-nottingham.html">Nottingham</a><a href="wifi-extensions-preston.html">Preston</a><a href="wifi-extensions-sheffield.html">Sheffield</a><a href="wifi-extensions-sunderland.html">Sunderland</a><a href="wifi-extensions-warrington.html">Warrington</a><a href="wifi-extensions-wakefield.html">Wakefield</a><a href="wifi-extensions-wigan.html">Wigan</a><a href="wifi-extensions-stockport.html">Stockport</a><a href="wifi-extensions-oldham.html">Oldham</a><a href="wifi-extensions-rochdale.html">Rochdale</a><a href="wifi-extensions-bury.html">Bury</a><a href="wifi-extensions-salford.html">Salford</a>
                                 </div>
                             </li>
-                            <li><a href="#contact" class="btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
+                            <li><a href="#contact" class="cta-btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
                         </ul>
                     
         </div>
@@ -189,7 +201,7 @@
     <footer id="contact">
         <div class="container">
             <a href="index.html" class="footer-logo">GARY PEARCE</a>
-            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">07770 476 455</p>
+            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">07830638337</p>
             <p style="margin-bottom: 3rem; color: var(--gray);">info@hardwire.uk | Manchester, United Kingdom</p>
             <div class="copyright">
                 &copy; 2026 Gary Pearce Home Services. Professional Installations in Sheffield.
