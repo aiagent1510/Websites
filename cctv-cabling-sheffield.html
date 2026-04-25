@@ -58,6 +58,13 @@
         .btn { display: inline-block; padding: 1.25rem 2.5rem; background: var(--gold); color: var(--navy); font-weight: 800; text-decoration: none; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2); }
         .btn:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4); }
 
+        .cta-btn { 
+            background: var(--gold); color: var(--navy); padding: 0.8rem 1.5rem; 
+            border-radius: 50px; font-weight: 800; text-decoration: none; 
+            transition: 0.3s; font-size: 0.9rem;
+        }
+        .cta-btn:hover { background: #fff; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+
         /* Services Grid */
         .section { padding: 8rem 0; }
         .section-header { text-align: center; margin-bottom: 4rem; }
@@ -79,9 +86,12 @@
         .faq-content { padding: 1.5rem; display: none; background: rgba(0,0,0,0.2); }
 
         /* Footer */
-        footer { padding: 6rem 0; background: #010409; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-        .footer-logo { font-size: 1.5rem; font-weight: 900; color: var(--gold); margin-bottom: 2rem; display: block; text-decoration: none; }
-        .copyright { color: var(--gray); font-size: 0.9rem; }
+        footer { padding: 6rem 0; background: #010409; text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.2); }
+        footer h2 { margin-bottom: 1rem; }
+        footer p { color: var(--gray); margin-bottom: 2rem; }
+        .phone { font-size: 2rem; font-weight: 900; color: var(--gold); text-decoration: none; display: block; margin-bottom: 1rem; }
+        .phone:hover { color: #fff; }
+        .copyright { color: var(--gray); font-size: 0.9rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; }
 
         @media (max-width: 768px) {
             .hero-grid, .split-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
@@ -200,13 +210,14 @@
 
     <footer id="contact">
         <div class="container">
-            <a href="index.html" class="footer-logo">GARY PEARCE</a>
-            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">07830638337</p>
-            <p style="margin-bottom: 3rem; color: var(--gray);">info@hardwire.uk | Manchester, United Kingdom</p>
+            <h2>Start Your Project</h2>
+            <p>Speak directly to Gary Pearce for an expert consultation.</p>
+            <a href="tel:07830638337" class="phone">07830638337</a>
+            <p>info@hardwire.uk | Available 24/7 for Emergencies</p>
             <div class="copyright">
-                &copy; 2026 Gary Pearce Home Services. Professional Installations in Sheffield.
+                &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
                 <br>
-                <a href="sitemap.xml" style="color: var(--gray); text-decoration: none; font-size: 0.8rem; margin-top: 1rem; display: inline-block;">Sitemap</a>
+                <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>
             </div>
         </div>
     </footer>
