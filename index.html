@@ -73,15 +73,16 @@
         .cta-btn { display: inline-block; padding: 1.5rem 3rem; background: var(--gold); color: var(--navy); font-weight: 900; text-decoration: none; border-radius: 50px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .cta-btn:hover { background: #fff; transform: scale(1.05); box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3); }
 
-        /* Footer */
-        footer { padding: 6rem 0; background: #010409; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-        .phone { font-size: 2.5rem; font-weight: 900; color: var(--gold); text-decoration: none; display: block; margin-bottom: 1rem; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .area-grid { grid-template-columns: 1fr; gap: 2rem; }
-            h1 { font-size: 3.5rem; }
+        /* Social Icons */
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+        .social-link { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.05); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: var(--gold); text-decoration: none; 
+            transition: 0.3s; border: 1px solid rgba(245, 158, 11, 0.2);
+            font-size: 1.2rem;
         }
+        .social-link:hover { background: var(--gold); color: var(--navy); transform: translateY(-5px); }
     </style>
 </head>
 <body>
@@ -226,7 +227,15 @@
             <p style="margin-bottom: 2rem;">Speak directly to Gary Pearce for an expert consultation.</p>
             <a href="tel:07830638337" class="phone">07830638337</a>
             <p>info@hardwire.uk | Available 24/7 for Emergencies</p>
-            <div style="margin-top: 4rem; color: var(--gray); font-size: 0.9rem;">
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="Instagram">📸</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Mastodon">🐘</a>
+                <a href="#" class="social-link" title="Weibo">🌏</a>
+            </div>
+
+            <div style="margin-top: 2rem; color: var(--gray); font-size: 0.9rem;">
                 &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
                 <br>
                 <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>

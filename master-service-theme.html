@@ -90,14 +90,16 @@
         footer h2 { margin-bottom: 1rem; }
         footer p { color: var(--gray); margin-bottom: 2rem; }
         .phone { font-size: 2rem; font-weight: 900; color: var(--gold); text-decoration: none; display: block; margin-bottom: 1rem; }
-        .phone:hover { color: #fff; }
-        .copyright { color: var(--gray); font-size: 0.9rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; }
-
-        @media (max-width: 768px) {
-            .hero-grid, .split-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
-            .nav-links { display: none; }
-            h1 { font-size: 3rem; }
+        /* Social Icons */
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+        .social-link { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.05); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: var(--gold); text-decoration: none; 
+            transition: 0.3s; border: 1px solid rgba(245, 158, 11, 0.2);
+            font-size: 1.2rem;
         }
+        .social-link:hover { background: var(--gold); color: var(--navy); transform: translateY(-5px); }
     </style>
 </head>
 <body>
@@ -197,7 +199,15 @@
             <p>Speak directly to Gary Pearce for an expert consultation.</p>
             <a href="tel:{{PHONE}}" class="phone">{{PHONE}}</a>
             <p>{{EMAIL}} | Available 24/7 for Emergencies</p>
-            <div class="copyright">
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="Instagram">📸</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Mastodon">🐘</a>
+                <a href="#" class="social-link" title="Weibo">🌏</a>
+            </div>
+
+            <div class="copyright" style="margin-top: 2rem;">
                 &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
                 <br>
                 <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>
