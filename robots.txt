@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aiagent1510.github.io/Websites/sitemap.xml
