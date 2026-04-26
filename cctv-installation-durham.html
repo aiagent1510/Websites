@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV Installation in Durham | Gary Pearce Home Services</title>
+    <meta name="description" content="Expert CCTV Installation for home and business owners in Durham. Professional installation by Gary Pearce. Serving the local area and surrounding areas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gary Pearce Home Services",
+      "image": "./Images/Gary Pearce With Customers/Gary Pearce Installations (10).webp",
+      "telephone": "07830638337",
+      "email": "info@hardwire.uk",
+      "url": "https://aiagent1510.github.io/Websites/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Durham",
+        "addressRegion": "Northern England",
+        "addressCountry": "UK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.4808,
+        "longitude": -2.2426
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --gold: #f59e0b;
+            --gold-hover: #d97706;
+            --navy: #0f172a;
+            --dark: #020617;
+            --gray: #64748b;
+            --text-light: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --radius: 12px;
+            --container: 1200px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Navigation */
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(245, 158, 11, 0.2); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); text-decoration: none; font-size: 1.5rem; letter-spacing: -1px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Dropdown */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: #0f172a; 
+            border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; 
+            min-width: 200px; display: none; padding: 1rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 0.5rem 1.5rem; }
+        .dropdown-menu a:hover { background: rgba(245,158,11,0.1); }
+
+        /* Hero Section */
+        .hero { position: relative; padding: 10rem 0 6rem; background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 60%); }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; color: var(--gold); }
+        .hero-p { font-size: 1.25rem; color: var(--gray); margin-bottom: 2rem; max-width: 600px; }
+        .hero-img-wrap { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid rgba(245, 158, 11, 0.2); }
+        .hero-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+
+        /* CTA Button */
+        .btn { display: inline-block; padding: 1.25rem 2.5rem; background: var(--gold); color: var(--navy); font-weight: 800; text-decoration: none; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2); }
+        .btn:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4); }
+
+        .cta-btn { 
+            background: var(--gold); color: var(--navy); padding: 0.8rem 1.5rem; 
+            border-radius: 50px; font-weight: 800; text-decoration: none; 
+            transition: 0.3s; font-size: 0.9rem;
+        }
+        .cta-btn:hover { background: #fff; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+
+        /* Services Grid */
+        .section { padding: 8rem 0; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--gold); }
+        .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold); }
+
+        /* Trust & Local Section */
+        .local-section { background: var(--navy); }
+        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .split-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--radius); }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+        .faq-trigger { padding: 1.5rem; background: rgba(255,255,255,0.02); cursor: pointer; font-weight: 700; color: var(--gold); display: flex; justify-content: space-between; }
+        .faq-content { padding: 1.5rem; display: none; background: rgba(0,0,0,0.2); }
+
+        /* Footer */
+        footer { padding: 6rem 0; background: #010409; text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.2); }
+        footer h2 { margin-bottom: 1rem; }
+        footer p { color: var(--gray); margin-bottom: 2rem; }
+        .phone { font-size: 2rem; font-weight: 900; color: var(--gold); text-decoration: none; display: block; margin-bottom: 1rem; }
+        /* Social Icons */
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+        .social-link { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.05); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: var(--gold); text-decoration: none; 
+            transition: 0.3s; border: 1px solid rgba(245, 158, 11, 0.2);
+            font-size: 1.2rem;
+        }
+        .social-link:hover { background: var(--gold); color: var(--navy); transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">GARY PEARCE</a>
+            
+                        <ul class="nav-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">Services ▾</a>
+                                <div class="dropdown-menu">
+                                    <a href="aerial-installation-durham.html">Aerial Installation</a><a href="tv-wall-mounting-durham.html">TV Wall Mounting</a><a href="phone-lines-durham.html">Phone Lines</a><a href="starlink-installation-durham.html">Starlink Installation</a><a href="cctv-installation-durham.html">CCTV Installation</a><a href="wireless-alarms-durham.html">Wireless Alarm Installation</a><a href="data-cabling-durham.html">Data Cabling</a><a href="wifi-installations-durham.html">WiFi Installations</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Areas ▾</a>
+                                <div class="dropdown-menu" style="max-height: 400px; overflow-y: auto;">
+                                    <a href="cctv-installation-blackburn.html">Blackburn</a><a href="cctv-installation-blackpool.html">Blackpool</a><a href="cctv-installation-bolton.html">Bolton</a><a href="cctv-installation-bradford.html">Bradford</a><a href="cctv-installation-chester.html">Chester</a><a href="cctv-installation-crewe.html">Crewe</a><a href="cctv-installation-darlington.html">Darlington</a><a href="cctv-installation-derby.html">Derby</a><a href="cctv-installation-doncaster.html">Doncaster</a><a href="cctv-installation-durham.html">Durham</a><a href="cctv-installation-halifax.html">Halifax</a><a href="cctv-installation-harrogate.html">Harrogate</a><a href="cctv-installation-huddersfield.html">Huddersfield</a><a href="cctv-installation-hull.html">Hull</a><a href="cctv-installation-leeds.html">Leeds</a><a href="cctv-installation-lincoln.html">Lincoln</a><a href="cctv-installation-liverpool.html">Liverpool</a><a href="cctv-installation-manchester.html">Manchester</a><a href="cctv-installation-middlesbrough.html">Middlesbrough</a><a href="cctv-installation-newcastle.html">Newcastle</a><a href="cctv-installation-nottingham.html">Nottingham</a><a href="cctv-installation-oldham.html">Oldham</a><a href="cctv-installation-preston.html">Preston</a><a href="cctv-installation-sheffield.html">Sheffield</a><a href="cctv-installation-stockport.html">Stockport</a><a href="cctv-installation-sunderland.html">Sunderland</a><a href="cctv-installation-wakefield.html">Wakefield</a><a href="cctv-installation-warrington.html">Warrington</a><a href="cctv-installation-wigan.html">Wigan</a><a href="cctv-installation-york.html">York</a>
+                                </div>
+                            </li>
+                            <li><a href="#contact" class="cta-btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
+                        </ul>
+                    
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>CCTV Installation <br>Expert in Durham</h1>
+                <p class="hero-p">Premium CCTV Installation solutions for discerning property owners in Durham and surrounding areas.</p>
+                <a href="#contact" class="btn">Get a Free Quote</a>
+            </div>
+            <div class="hero-img-wrap">
+                <img src="./Images/Gary Pearce With Customers/Gary Pearce Installations (10).webp" alt="CCTV Installation in Durham by Gary Pearce">
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional CCTV Installation Services</h2>
+                <p>Top-tier installations in Durham and surrounding areas.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <img src="./Images/CCTV/CCTV Camera Installation Service by Hardwire.uk.webp" alt="CCTV Installation Detail 1">
+                    <h3>Expert Installation</h3>
+                    <p>Our expert team ensures every CCTV Installation installation in Durham is performed to the highest industry standards.</p>
+                </div>
+                <div class="card">
+                    <img src="./Images/CCTV/CCTV Installation service by Gary Pearce.webp" alt="CCTV Installation Detail 2">
+                    <h3>Clean & Discreet</h3>
+                    <p>We pride ourselves on clean, discreet wiring and state-of-the-art equipment that blends into your property.</p>
+                </div>
+                <div class="card">
+                    <img src="./Images/CCTV/Gary Pearce Installations (12).webp" alt="CCTV Installation Detail 3">
+                    <h3>5-Year Warranty</h3>
+                    <p>Every project comes with a comprehensive 5-year warranty and lifetime support from Gary Pearce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section local-section">
+        <div class="container split-grid">
+            <div class="split-img-wrap">
+                <img src="./Images/CCTV/Gary Pearce Installations (16).webp" alt="Local CCTV Installation in Durham">
+            </div>
+            <div class="split-content">
+                <h2>Local Trust in Durham</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">With a deep understanding of Durham's unique security challenges, including security vulnerabilities, we provide tailored solutions that use the latest smart security tech to keep you safe. Beyond CCTV Installation, we also offer professional <a href="aerial-installation-durham.html" style="color: var(--gold); text-decoration: underline;">Aerial Installation</a>, <a href="tv-wall-mounting-durham.html" style="color: var(--gold); text-decoration: underline;">TV Wall Mounting</a>, <a href="phone-lines-durham.html" style="color: var(--gold); text-decoration: underline;">Phone Lines</a> in Durham to provide complete property protection.</p>
+                <p style="color: var(--gold); font-weight: 800;">Areas Covered: Durham</p>
+                <p style="color: var(--gray); margin-top: 1rem;">Landmarks we serve near: the local area</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">How long does a CCTV Installation installation take? <span>+</span></div>
+                    <div class="faq-content">Most installations in Durham are completed within a single day, depending on the complexity of your property.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Do you provide a warranty? <span>+</span></div>
+                    <div class="faq-content">Yes, all our CCTV Installation work in Durham is backed by a full 5-year parts and labor warranty.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Can I monitor my system remotely? <span>+</span></div>
+                    <div class="faq-content">Absolutely. We integrate the latest smart security tech which allows full control and monitoring from your smartphone or tablet.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Are you fully insured for work in Durham? <span>+</span></div>
+                    <div class="faq-content">Yes, Gary Pearce Home Services carries full public liability insurance for all CCTV Installation projects in Durham and across the North.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-trigger" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">What areas of Durham do you cover? <span>+</span></div>
+                    <div class="faq-content">We cover the entire Durham area and surrounding postcodes, serving both residential and commercial clients near the local area.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Start Your Project</h2>
+            <p>Speak directly to Gary Pearce for an expert consultation.</p>
+            <a href="tel:07830638337" class="phone">07830638337</a>
+            <p>info@hardwire.uk | Available 24/7 for Emergencies</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="Instagram">📸</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Mastodon">🐘</a>
+                <a href="#" class="social-link" title="Weibo">🌏</a>
+            </div>
+
+            <div class="nap-block" style="margin-top: 2rem; padding: 1rem; border: 1px solid rgba(245, 158, 11, 0.1); border-radius: 8px; font-size: 0.9rem; color: var(--gray);">
+                <p><strong>Gary Pearce Home Services</strong></p>
+                <p>Expert 🛡️ CCTV Installation in Durham & Northern England</p>
+                <p>📞 <a href="tel:07830638337" style="color: var(--gold); text-decoration: none;">07830638337</a> | 📧 info@hardwire.uk</p>
+                <p>📍 Available across: Durham</p>
+            </div>
+
+            <div class="copyright" style="margin-top: 2rem;">
+                &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
+                <br>
+                <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
