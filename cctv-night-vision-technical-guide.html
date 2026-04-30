@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color vs Black & White: CCTV Night Vision Technical Guide | Gary Pearce</title>
+    <meta name="description" content="A deep-dive technical comparison of Color vs Black & White CCTV night vision. Learn about Lux levels, F1.0 apertures, and forensic identification for Northern England homes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #f59e0b;
+            --navy: #0f172a;
+            --dark: #020617;
+            --gray: #64748b;
+            --text-light: #f8fafc;
+            --radius: 12px;
+            --container: 900px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: var(--text-light); line-height: 1.8; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(245, 158, 11, 0.2); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); text-decoration: none; font-size: 1.5rem; }
+
+        header { padding: 8rem 0 4rem; text-align: center; background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 70%); }
+        h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 6vw, 4rem); color: var(--gold); line-height: 1.1; margin-bottom: 1.5rem; }
+        .subtitle { font-size: 1.2rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+
+        article { background: rgba(30, 41, 59, 0.4); padding: 4rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 4rem; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: var(--gold); margin: 3rem 0 1.5rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #cbd5e1; }
+        ul, ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #cbd5e1; }
+        li { margin-bottom: 0.75rem; }
+
+        .highlight-box { background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .highlight-box strong { color: var(--gold); }
+
+        table { width: 100%; border-collapse: collapse; margin: 3rem 0; background: rgba(15, 23, 42, 0.5); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 1.2rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th { background: rgba(245, 158, 11, 0.1); color: var(--gold); font-family: 'Montserrat', sans-serif; }
+        tr:hover { background: rgba(255,255,255,0.02); }
+
+        .media-container { margin: 3rem 0; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .media-container img { width: 100%; height: auto; display: block; opacity: 0.9; transition: 0.5s; }
+        .media-container:hover img { opacity: 1; transform: scale(1.02); }
+        .caption { text-align: center; padding: 1rem; background: rgba(15, 23, 42, 0.8); font-size: 0.9rem; color: var(--gray); border-top: 1px solid rgba(245, 158, 11, 0.2); }
+
+        .cta-section { text-align: center; padding: 4rem; background: var(--navy); border-radius: var(--radius); border: 1px solid var(--gold); }
+        .cta-btn { display: inline-block; padding: 1.2rem 2.5rem; background: var(--gold); color: var(--navy); font-weight: 800; text-decoration: none; border-radius: 50px; transition: 0.3s; font-family: 'Montserrat', sans-serif; margin-top: 1.5rem; }
+        .cta-btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); background: #fff; }
+
+        footer { padding: 4rem 0; text-align: center; color: var(--gray); border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); margin-bottom: 1rem; display: block; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">GARY PEARCE</a>
+            <a href="index.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">← Back to Home</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <p class="subtitle">Technical Master Guide</p>
+            <h1>Color vs Black & White:<br>The Truth About Night Vision</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <div class="highlight-box">
+                <strong>Direct Answer:</strong> When comparing Color vs Black & White CCTV night vision, the "best" choice depends entirely on your ambient light levels (Lux) and your identification requirements. For high-security environments in Northern England, we recommend a dual-spectrum approach using Hikvision ColorVu or Dahua Full-color technology alongside traditional IR.
+            </div>
+
+            <p>Choosing the right night vision technology is critical for any professional surveillance installation. In the past, "night vision" simply meant grainy black and white footage. Today, modern sensors allow us to capture full-color evidence even in near-total darkness.</p>
+
+            <h2>1. Traditional Infrared (Black & White)</h2>
+            <p>Traditional IR cameras use infrared LEDs to illuminate a scene. The camera switches to a monochrome mode and removes the IR-cut filter to "see" the light reflected off objects.</p>
+            
+            <ul>
+                <li><strong>Zero-Light Performance:</strong> The only viable option for absolute 0 Lux environments like windowless basements or remote rural outbuildings with no street lighting.</li>
+                <li><strong>Discretion:</strong> 940nm IR LEDs are completely invisible to the human eye, whereas "Warm Light" LEDs used for color night vision can be intrusive.</li>
+                <li><strong>Spider Web Issues:</strong> A major technical drawback. IR LEDs attract insects, leading to spider webs that trigger false motion alerts and obscure the lens.</li>
+            </ul>
+
+            <div class="media-container">
+                <img src="Images/CCTV/Gary Pearce Installations (22).webp" alt="Gary Pearce Professional CCTV Installation">
+                <div class="caption">Figure 1: A professional 4K installation by Gary Pearce ensuring optimal sensor placement for night-time clarity.</div>
+            </div>
+
+            <h2>2. Full-Color Night Vision (ColorVu Technology)</h2>
+            <p>Technologies like Hikvision ColorVu use ultra-large apertures (F1.0) to collect more light. This allows the sensor to remain in color mode when traditional cameras would have switched to black and white.</p>
+
+            <h3>Why Color Evidence Matters</h3>
+            <p>In a forensic investigation, color is the most valuable piece of information. Identifying a suspect in a <strong>"Red North Face Jacket"</strong> is significantly more useful to the police than identifying a suspect in a <strong>"Light Grey Jacket"</strong> on a monochrome feed.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Traditional IR (Mono)</th>
+                        <th>ColorVu / Full-color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Aperture Size</strong></td>
+                        <td>F2.0 (Standard)</td>
+                        <td>F1.0 (Super Aperture)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Min. Illumination</strong></td>
+                        <td>0.01 Lux</td>
+                        <td>0.0005 Lux</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insect Attraction</strong></td>
+                        <td>High (IR Light)</td>
+                        <td>Low (Visible Light)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evidence Value</strong></td>
+                        <td>Shape & Movement</td>
+                        <td>Full Forensic Detail</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Technical Recommendation</h2>
+            <p>For most residential and commercial properties in Northern England (Manchester, Leeds, York), we recommend <strong>ColorVu sensors</strong>. Even the small amount of ambient light from street lamps or porch lights is usually enough to keep these cameras in high-definition color mode all night.</p>
+            
+            <p>However, for large estates or agricultural properties with zero ambient light, we implement <strong>Hybrid Light</strong> systems. These stay in color mode using a sensor's high sensitivity but trigger a white light only when a person or vehicle is detected, providing both a deterrent and high-quality evidence.</p>
+
+            <div class="cta-section">
+                <h3>Get a Professional Site Survey</h3>
+                <p>We use specialized Lux meters to measure your property's ambient light before recommending a sensor. Don't guess your security—measure it.</p>
+                <a href="tel:07830638337" class="cta-btn">Call Gary: 07830638337</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">GARY PEARCE HOME SERVICES</span>
+            <p>&copy; 2026 Expert Security & Connectivity Solutions.</p>
+            <p>Manchester | Leeds | York | Northern England</p>
+        </div>
+    </footer>
+</body>
+</html>
