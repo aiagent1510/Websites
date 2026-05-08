@@ -164,7 +164,7 @@ def generate_index():
     <div class="container">
         <header>
             <a href="../index.html" class="back-link">&larr; Return to Core Hub</a>
-            <h1>Intelligence Swarm</h1>
+            <h1>Security Guides</h1>
             <p class="subtitle">Forensic security analysis, technical guides, and real-time connectivity insights for the North's most elite properties.</p>
         </header>
 
