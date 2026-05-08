@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary Pearce Home Services | Premium Security & Connectivity UK</title>
+    <meta name="description" content="Expert home security and connectivity solutions by Gary Pearce. Bespoke CCTV, Data Cabling, and Alarm Systems across Manchester, Leeds, and York. Call 07770 476 455.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gary Pearce Home Services",
+      "image": "https://aiagent1510.github.io/Websites/Images/Gary%20Pearce%20With%20Customers/Gary%20Pearce%20Installations%20(10).webp",
+      "telephone": "07830638337",
+      "email": "info@hardwire.uk",
+      "url": "https://aiagent1510.github.io/Websites/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Manchester",
+        "addressRegion": "Northern England",
+        "addressCountry": "UK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.4808,
+        "longitude": -2.2426
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --gold: #f59e0b;
+            --gold-hover: #d97706;
+            --navy: #0f172a;
+            --dark: #020617;
+            --gray: #64748b;
+            --text-light: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --radius: 12px;
+            --container: 1200px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Navigation */
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(245, 158, 11, 0.2); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--gold); text-decoration: none; font-size: 1.5rem; letter-spacing: -1px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Dropdown */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: #0f172a; 
+            border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; 
+            min-width: 200px; display: none; padding: 1rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 0.5rem 1.5rem; }
+        .dropdown-menu a:hover { background: rgba(245,158,11,0.1); }
+
+        /* Hero */
+        .hero { padding: 12rem 0 8rem; background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 50%); text-align: center; }
+        h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5rem); line-height: 1; margin-bottom: 2rem; color: var(--gold); }
+        .hero p { font-size: 1.5rem; color: var(--gray); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* Services Grid */
+        .section { padding: 8rem 0; }
+        .section-header { text-align: center; margin-bottom: 5rem; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 3rem 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05); text-align: center; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .card:hover { transform: translateY(-15px); border-color: var(--gold); background: rgba(30, 41, 59, 0.9); }
+        .icon { font-size: 4rem; margin-bottom: 2rem; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold); font-family: 'Montserrat', sans-serif; }
+
+        /* Areas Section */
+        .areas { background: var(--navy); }
+        .area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
+        .area-col h3 { margin-bottom: 2rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; display: inline-block; }
+        .area-links { list-style: none; }
+        .area-links li { margin-bottom: 1rem; }
+        .area-links a { color: var(--gray); text-decoration: none; transition: 0.3s; }
+        .area-links a:hover { color: var(--gold); padding-left: 10px; }
+
+        /* CTA */
+        .cta-btn { display: inline-block; padding: 1.5rem 3rem; background: var(--gold); color: var(--navy); font-weight: 900; text-decoration: none; border-radius: 50px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .cta-btn:hover { background: #fff; transform: scale(1.05); box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3); }
+
+        /* Social Icons */
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+        .social-link { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.05); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: var(--gold); text-decoration: none; 
+            transition: 0.3s; border: 1px solid rgba(245, 158, 11, 0.2);
+            font-size: 1.2rem;
+        }
+        .social-link:hover { background: var(--gold); color: var(--navy); transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">GARY PEARCE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="cctv-cabling-manchester.html">CCTV Systems</a>
+                        <a href="alarms-manchester.html">Alarm Systems</a>
+                        <a href="data-cabling-manchester.html">Data Cabling</a>
+                        <a href="tv-aerials-manchester.html">TV Aerials</a>
+                        <a href="wifi-extensions-manchester.html">Wi-Fi Extensions</a>
+                        <a href="intercom-systems-manchester.html">Intercom Systems</a>
+                        <a href="starlink-installation-manchester.html">Starlink Installation</a>
+                        <a href="tv-wall-mounting-manchester.html">TV Wall Mounting</a>
+                        <hr style="border: 0; border-top: 1px solid rgba(245, 158, 11, 0.2); margin: 0.5rem 0;">
+                        <a href="cctv-night-vision-technical-guide.html" style="color: var(--gold);">Night Vision Guide</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Areas ▾</a>
+                    <div class="dropdown-menu" style="max-height: 400px; overflow-y: auto;">
+                        <a href="cctv-cabling-blackburn.html">Blackburn</a>
+                        <a href="cctv-cabling-blackpool.html">Blackpool</a>
+                        <a href="cctv-cabling-bolton.html">Bolton</a>
+                        <a href="cctv-cabling-bradford.html">Bradford</a>
+                        <a href="cctv-cabling-bury.html">Bury</a>
+                        <a href="cctv-cabling-chester.html">Chester</a>
+                        <a href="cctv-cabling-crewe.html">Crewe</a>
+                        <a href="cctv-cabling-darlington.html">Darlington</a>
+                        <a href="cctv-cabling-doncaster.html">Doncaster</a>
+                        <a href="cctv-cabling-halifax.html">Halifax</a>
+                        <a href="cctv-cabling-harrogate.html">Harrogate</a>
+                        <a href="cctv-cabling-huddersfield.html">Huddersfield</a>
+                        <a href="cctv-cabling-hull.html">Hull</a>
+                        <a href="cctv-cabling-leeds.html">Leeds</a>
+                        <a href="cctv-cabling-lincoln.html">Lincoln</a>
+                        <a href="cctv-cabling-liverpool.html">Liverpool</a>
+                        <a href="cctv-cabling-manchester.html">Manchester</a>
+                        <a href="cctv-cabling-nottingham.html">Nottingham</a>
+                        <a href="cctv-cabling-oldham.html">Oldham</a>
+                        <a href="cctv-cabling-preston.html">Preston</a>
+                        <a href="cctv-cabling-rochdale.html">Rochdale</a>
+                        <a href="cctv-cabling-salford.html">Salford</a>
+                        <a href="cctv-cabling-sheffield.html">Sheffield</a>
+                        <a href="cctv-cabling-stockport.html">Stockport</a>
+                        <a href="cctv-cabling-sunderland.html">Sunderland</a>
+                        <a href="cctv-cabling-wakefield.html">Wakefield</a>
+                        <a href="cctv-cabling-warrington.html">Warrington</a>
+                        <a href="cctv-cabling-wigan.html">Wigan</a>
+                        <a href="cctv-cabling-york.html">York</a>
+                    </div>
+                </li>
+                <li><a href="#contact" class="cta-btn" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Elite Security <br>& Connectivity</h1>
+            <p>High-end CCTV, Data Cabling, and Intelligent Alarm Systems. Masterfully installed by Gary Pearce across Northern England.</p>
+            <a href="tel:07830638337" class="cta-btn">Call Now: 07830638337</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bespoke Solutions</h2>
+                <p>Engineering excellence for your home and business.</p>
+            </div>
+            <div class="grid">
+                <a href="cctv-cabling-manchester.html" class="card">
+                    <span class="icon">🛡️</span>
+                    <h3>CCTV Systems</h3>
+                    <p>4K UHD Surveillance with AI human detection and remote monitoring.</p>
+                </a>
+                <a href="alarms-manchester.html" class="card">
+                    <span class="icon">🚨</span>
+                    <h3>Smart Alarms</h3>
+                    <p>Grade 2/3 security systems with immediate smartphone alerts.</p>
+                </a>
+                <a href="data-cabling-manchester.html" class="card">
+                    <span class="icon">🔌</span>
+                    <h3>Data Cabling</h3>
+                    <p>Cat6a/Cat7 structured cabling for lightning-fast networking.</p>
+                </a>
+                <a href="tv-aerials-manchester.html" class="card">
+                    <span class="icon">📡</span>
+                    <h3>TV & Satellite</h3>
+                    <p>Perfect signal optimization and professional wall mounting.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Service Areas</h2>
+                <p>Serving the finest properties across the North. 1.5 Hour Radius of Leeds.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); text-align: center;">
+                <a href="cctv-cabling-manchester.html" class="area-link">Manchester</a>
+                <a href="cctv-cabling-leeds.html" class="area-link">Leeds</a>
+                <a href="cctv-cabling-york.html" class="area-link">York</a>
+                <a href="cctv-cabling-liverpool.html" class="area-link">Liverpool</a>
+                <a href="cctv-cabling-sheffield.html" class="area-link">Sheffield</a>
+                <a href="cctv-cabling-nottingham.html" class="area-link">Nottingham</a>
+                <a href="cctv-cabling-blackpool.html" class="area-link">Blackpool</a>
+                <a href="cctv-cabling-bradford.html" class="area-link">Bradford</a>
+                <a href="cctv-cabling-hull.html" class="area-link">Hull</a>
+                <a href="cctv-cabling-chester.html" class="area-link">Chester</a>
+                <a href="cctv-cabling-preston.html" class="area-link">Preston</a>
+                <a href="cctv-cabling-warrington.html" class="area-link">Warrington</a>
+                <a href="cctv-cabling-doncaster.html" class="area-link">Doncaster</a>
+                <a href="cctv-cabling-huddersfield.html" class="area-link">Huddersfield</a>
+                <a href="cctv-cabling-harrogate.html" class="area-link">Harrogate</a>
+                <a href="cctv-cabling-blackburn.html" class="area-link">Blackburn</a>
+                <a href="cctv-cabling-bolton.html" class="area-link">Bolton</a>
+                <a href="cctv-cabling-crewe.html" class="area-link">Crewe</a>
+                <a href="cctv-cabling-darlington.html" class="area-link">Darlington</a>
+                <a href="cctv-cabling-lincoln.html" class="area-link">Lincoln</a>
+                <a href="cctv-cabling-sunderland.html" class="area-link">Sunderland</a>
+                <a href="cctv-cabling-wakefield.html" class="area-link">Wakefield</a>
+                <a href="cctv-cabling-wigan.html" class="area-link">Wigan</a>
+                <a href="cctv-cabling-halifax.html" class="area-link">Halifax</a>
+            </div>
+            <style>
+                .area-link { color: var(--gray); text-decoration: none; font-weight: 600; transition: 0.3s; padding: 0.5rem; }
+                .area-link:hover { color: var(--gold); transform: scale(1.1); }
+            </style>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Start Your Project</h2>
+            <p style="margin-bottom: 2rem;">Speak directly to Gary Pearce for an expert consultation.</p>
+            <a href="tel:07830638337" class="phone">07830638337</a>
+            <p>info@hardwire.uk | Available 24/7 for Emergencies</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="Instagram">📸</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Mastodon">🐘</a>
+                <a href="#" class="social-link" title="Weibo">🌏</a>
+            </div>
+
+            <div class="nap-block" style="margin-top: 2rem; padding: 1rem; border: 1px solid rgba(245, 158, 11, 0.1); border-radius: 8px; font-size: 0.9rem; color: var(--gray);">
+                <p><strong>Gary Pearce Home Services</strong></p>
+                <p>Expert Security & Connectivity across Northern England</p>
+                <p>📞 <a href="tel:07830638337" style="color: var(--gold); text-decoration: none;">07830638337</a> | 📧 info@hardwire.uk</p>
+                <p>📍 Manchester | Leeds | York | Liverpool | Sheffield | Nottingham & 23+ more cities</p>
+            </div>
+
+            <div style="margin-top: 2rem; color: var(--gray); font-size: 0.9rem;">
+                &copy; 2026 Gary Pearce Home Services. All Rights Reserved.
+                <br>
+                <a href="sitemap.xml" style="color: var(--gray); text-decoration: none;">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
