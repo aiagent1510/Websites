@@ -2,66 +2,68 @@ class ForensicEngine:
     @staticmethod
     def get_prompt(question, pillars):
         return f'''
-        You are a Forensic Security Expert and SEO Master. 
-        Write a technical, authoritative blog post answering: "{question}"
+        You are a Master Forensic SEO Expert with 20 years experience in UK security (CCTV, Alarms, Data Cabling). 
+        Write a hyper-technical, forensic-grade audit answering: "{question}"
         
-        STRICT RULES:
-        1. NO MARKDOWN. Output PURE HTML structure.
-        2. 2-3 SENTENCES PER PARAGRAPH ONLY. This is for mobile SEO.
-        3. HIGH TECHNICAL AUTHORITY. Mention specific models, frequencies (868MHz), sensor types (PIR, Microwave), and standards (Grade 2/3).
+        CRITICAL SEO SKILLS TO DEPLOY:
+        1. NO FILLER: Do not use phrases like "Today we are focusing on" or "In this blog post".
+        2. ENTITY DENSITY: Mention specific hardware: Ajax Hub 2 Plus, Hikvision ColorVu G2, Dahua TiOC 2.0, Cat7 LSZH (Low Smoke Zero Halogen).
+        3. LOCAL FORENSICS: If the topic is location-based, mention specific technical challenges like "Sunderland coastal salinity impact on outdoor PIRs" or "Leeds city center RF interference at 868MHz".
+        4. TECHNICAL DEPTH: Talk about bitrates (H.265+), throughput (Gbps), frequency hopping, and Grade 3 EN50131 compliance.
         
         STRUCTURE:
-        - <h2> Title with the question
-        - <p> Forensic intro.
-        - <h3> The Technical Breakdown
-        - <p> Details about technology and security standards.
-        - [INSERT_TABLE_HERE] - Create a 3-column HTML table comparing 3 key technical specs.
-        - <h3> 2026 Forensic Verdict
-        - <p> Final recommendation for UK homeowners.
-        - [INSERT_VIDEO_HERE] - Provide a descriptive placeholder for a technical security video.
-        - [INSERT_SCHEMA_HERE] - Provide a JSON-LD FAQ Schema for this question.
+        - <h2> {question}
+        - <p> A strong, technical opening that defines the current 2026 standard.
+        - [INSERT_TABLE_HERE] - A technical specification table comparing the top 3 hardware solutions for this specific problem.
+        - <h3> Forensic Implementation Strategy
+        - <p> 2-3 sentences on the exact installation methodology (e.g. "We deploy CAT7 backbone to eliminate latency for 4K AI triggers").
+        - <h3> The 2026 Verdict
+        - <p> Final authoritative recommendation.
         
         INTERLINKING:
-        Link naturally to at least 2 of these pillar pages using <a href="../{pillars[0]['url']}">:
+        Link naturally to the regional hubs using technical anchor text:
         {pillars}
+        
+        [INSERT_VIDEO_HERE] - Placeholder for a professional installation demo.
+        [INSERT_SCHEMA_HERE] - JSON-LD FAQ schema for Google Rich Results.
         '''
 
     @staticmethod
     def wrap_html(content, title, canonical_url, image_url=None):
-        # Clean up placeholders and inject real data
-        # For simplicity in this demo, the LLM will provide the HTML strings for table/schema
-        
         return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | Forensic Security Audit</title>
+    <title>{title} | Forensic Security Audit 2026</title>
+    <meta name="description" content="Technical forensic audit on {title}. Professional security standards for 2026 UK market.">
     <link rel="canonical" href="{canonical_url}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <style>
-        body {{ font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; line-height: 1.8; margin: 0; padding: 0; }}
-        .container {{ max-width: 850px; margin: 0 auto; padding: 4rem 2rem; }}
-        header {{ border-bottom: 1px solid rgba(245, 158, 11, 0.2); margin-bottom: 3rem; padding-bottom: 2rem; }}
-        h1 {{ color: #f59e0b; font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; }}
-        h2, h3 {{ color: #f59e0b; margin-top: 2.5rem; }}
-        p {{ margin-bottom: 1.5rem; font-size: 1.1rem; color: #cbd5e1; }}
-        a {{ color: #fbbf24; text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: 0.3s; }}
-        a:hover {{ border-color: #fbbf24; }}
-        .infographic {{ width: 100%; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3); margin: 2rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }}
-        table {{ width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(30, 41, 59, 0.5); border-radius: 8px; overflow: hidden; }}
-        th, td {{ padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }}
-        th {{ background: rgba(245, 158, 11, 0.1); color: #f59e0b; }}
-        .video-placeholder {{ background: #000; padding: 2rem; text-align: center; border-radius: 12px; border: 1px solid #334155; margin: 2rem 0; }}
-        .back-btn {{ display: inline-block; margin-bottom: 2rem; color: #f59e0b; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }}
+        :root {{ --gold: #f59e0b; --dark: #0f172a; --text: #f8fafc; --muted: #94a3b8; }}
+        body {{ font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.8; margin: 0; padding: 0; }}
+        .container {{ max-width: 900px; margin: 0 auto; padding: 6rem 2rem; }}
+        header {{ border-left: 4px solid var(--gold); padding-left: 2rem; margin-bottom: 4rem; }}
+        h1 {{ font-family: 'Montserrat', sans-serif; color: var(--gold); font-size: 3rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem; }}
+        h2 {{ color: var(--gold); font-size: 2rem; margin-top: 3rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 1rem; }}
+        h3 {{ color: #fff; font-size: 1.5rem; margin-top: 2.5rem; }}
+        p {{ margin-bottom: 1.5rem; font-size: 1.15rem; color: #cbd5e1; }}
+        a {{ color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px dashed var(--gold); transition: 0.3s; }}
+        a:hover {{ border-bottom-style: solid; background: rgba(245, 158, 11, 0.1); }}
+        .infographic {{ width: 100%; border-radius: 16px; border: 1px solid rgba(245, 158, 11, 0.3); margin: 3rem 0; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }}
+        table {{ width: 100%; border-collapse: collapse; margin: 3rem 0; background: rgba(30, 41, 59, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }}
+        th, td {{ padding: 1.2rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }}
+        th {{ background: rgba(245, 158, 11, 0.15); color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }}
+        .video-box {{ background: #000; border-radius: 16px; border: 1px solid #334155; margin: 3rem 0; overflow: hidden; }}
+        .forensic-stamp {{ display: inline-block; background: var(--gold); color: var(--dark); padding: 4px 12px; font-weight: 900; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; }}
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-btn">&larr; Back to Security Guides</a>
-        <header>
+        <a href="index.html" style="border:none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">&larr; Back to Forensic Hub</a>
+        <header style="margin-top: 2rem;">
+            <div class="forensic-stamp">Verified Forensic Audit 2026</div>
             <h1>{title}</h1>
-            <p style="color: #64748b;">Forensic Security Audit | Real-time 2026 Intelligence</p>
         </header>
         
         <article>
@@ -69,8 +71,9 @@ class ForensicEngine:
             {content}
         </article>
         
-        <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
-            <p>&copy; 2026 Gary Pearce Home Services | Forensic Security & Technical Compliance</p>
+        <footer style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <p style="color: var(--muted);">Gary Pearce Home Services | Engineering Excellence Since 2004</p>
+            <p style="font-size: 0.8rem;">[Manchester | Leeds | York | Huddersfield | Sheffield]</p>
         </footer>
     </div>
 </body>
