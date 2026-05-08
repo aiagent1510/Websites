@@ -3,7 +3,6 @@ import json
 import time
 from forensic_engine import ForensicEngine
 
-# REAL-TIME INTELLIGENCE FEED (SIMULATED DYNAMIC UPDATE)
 QUESTIONS = [
     "WiFi 7 Upgrades in Sunderland (2026 Technical Audit)",
     "Hikvision AX Pro vs Ajax: The Ultimate 2026 Wireless Security Showdown",
@@ -13,16 +12,6 @@ QUESTIONS = [
     "How to mitigate 868MHz frequency jamming in wireless alarms?",
     "Cat6a vs Cat7 for 10Gbps home networking: What you actually need in 2026"
 ]
-
-# Relevant YouTube Video IDs
-VIDEO_MAP = {
-    "wifi": "f2F9_99_IqA",
-    "ajax": "C0G6yvG7L9E",
-    "hikvision": "uG8kS6f6K3I",
-    "starlink": "vN6XN2S0_Qo",
-    "dahua": "uG8kS6f6K3I", # Using Hikvision as fallback for security demo
-    "default": "C0G6yvG7L9E"
-}
 
 WEBSITE_DIR = r"C:\Users\Gary\.gemini\antigravity\scratch\Websites"
 BLOG_DIR = os.path.join(WEBSITE_DIR, "blog")
@@ -34,12 +23,11 @@ PILLARS = [
 ]
 
 def generate_post(question):
-    print(f"--- GENERATING AUTHORITATIVE POST: {question} ---")
+    print(f"--- GENERATING CLEAN POST: {question} ---")
     slug = question.lower().replace(":", "").replace("?", "").replace(" ", "-").replace("'", "").replace("(", "").replace(")", "")
     filename = os.path.join(BLOG_DIR, f"{slug}.html")
     canonical = f"https://gary-pearce-home-services.pages.dev/blog/{slug}.html"
     
-    # Content Logic
     content = f'''
     <p>In 2026, the security industry has reached a point where legacy systems are no longer viable for high-end residential protection. We are seeing a massive shift towards forensic-grade data capture and sub-millisecond AI response times.</p>
     
@@ -75,19 +63,6 @@ def generate_post(question):
     
     <h3>The 2026 Verdict</h3>
     <p>The forensic audit is clear: Upgrading to WiFi 7 or Cat7 infrastructure is the only way to future-proof your property against the evolving threats of high-speed frequency jamming and network congestion.</p>
-    '''
-    
-    # Get relevant video ID
-    v_id = VIDEO_MAP["default"]
-    for key in VIDEO_MAP:
-        if key in question.lower():
-            v_id = VIDEO_MAP[key]
-            break
-            
-    content += f'''
-    <div class="video-box">
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/{v_id}" frameborder="0" allowfullscreen></iframe>
-    </div>
     
     <script type="application/ld+json">
     {{
