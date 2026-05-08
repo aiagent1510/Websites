@@ -1,18 +1,19 @@
 import os
-import subprocess
 
 WEBSITE_DIR = r"C:\Users\Gary\.gemini\antigravity\scratch\Websites"
 BLOG_DIR = os.path.join(WEBSITE_DIR, "blog")
 INDEX_FILE = os.path.join(BLOG_DIR, "index.html")
 
-def generate_index():
+def generate_stunning_index():
     print("--- GENERATING STUNNING BLOG INDEX ---")
+    
     files = [f for f in os.listdir(BLOG_DIR) if f.endswith('.html') and f != 'index.html']
     files.sort(key=lambda x: os.path.getmtime(os.path.join(BLOG_DIR, x)), reverse=True)
     
     blog_cards = ""
     for f in files:
         title = f.replace(".html", "").replace("-", " ").title()
+        # Create a "Forensic" looking card
         blog_cards += f'''
         <a href="{f}" class="blog-card">
             <div class="card-tag">Forensic Intelligence</div>
@@ -179,16 +180,5 @@ def generate_index():
         f.write(html_content)
     print("DONE: Stunning Blog Index Generated.")
 
-def deploy():
-    print("--- PUSHING TO GITHUB/CLOUDFLARE ---")
-    try:
-        subprocess.run("git add .", shell=True, cwd=WEBSITE_DIR)
-        subprocess.run('git commit -m "Live Swarm Intel: Premium Design Upgrade"', shell=True, cwd=WEBSITE_DIR)
-        subprocess.run("git push origin main", shell=True, cwd=WEBSITE_DIR)
-        print("DONE: DEPLOYED SUCCESSFULLY.")
-    except Exception as e:
-        print(f"Deployment error: {e}")
-
 if __name__ == "__main__":
-    generate_index()
-    deploy()
+    generate_stunning_index()
