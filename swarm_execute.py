@@ -1,5 +1,6 @@
 import os
 import time
+import random
 from forensic_engine import ForensicEngine
 
 # THE EXPANDED HIGH-QUALITY TARGET LIST
@@ -62,8 +63,24 @@ BLOG_DIR = os.path.join(WEBSITE_DIR, "blog")
 if not os.path.exists(BLOG_DIR):
     os.makedirs(BLOG_DIR)
 
+def get_related_links(current_target):
+    related = []
+    # Pick 3 random targets that are not the current one
+    pool = [t for t in TARGETS if t != current_target]
+    selection = random.sample(pool, 3)
+    
+    for s in selection:
+        city = s["city"]
+        service = s["service"]
+        service_display = service.replace("-", " ").title()
+        title = f"{service_display} in {city} (2026 Forensic Audit)"
+        slug = f"{service}-{city.lower().replace(' ', '-')}-2026-audit.html"
+        related.append({"title": title, "url": slug})
+    
+    return related
+
 def generate_high_quality_posts():
-    print("--- STARTING HIGH-QUALITY FORENSIC GENERATION ---")
+    print("--- STARTING HIGH-QUALITY FORENSIC GENERATION WITH INTERNAL LINKING ---")
     
     for t in TARGETS:
         city = t["city"]
@@ -74,7 +91,9 @@ def generate_high_quality_posts():
         
         print(f"Generating: {title}")
         
-        content = ForensicEngine.generate_forensic_content(city, service)
+        related_links = get_related_links(t)
+        
+        content = ForensicEngine.generate_forensic_content(city, service, related_links)
         canonical = f"https://gary-pearce-home-services.pages.dev/blog/{slug}"
         
         final_html = ForensicEngine.wrap_html(content, title, canonical)
@@ -83,7 +102,7 @@ def generate_high_quality_posts():
         with open(file_path, "w", encoding='utf-8') as f:
             f.write(final_html)
             
-    print("DONE: Generated 10 premium forensic audits.")
+    print(f"DONE: Generated {len(TARGETS)} premium forensic audits with internal linking.")
 
 if __name__ == "__main__":
     generate_high_quality_posts()

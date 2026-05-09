@@ -3,7 +3,7 @@ import swarm_skills
 
 class ForensicEngine:
     @staticmethod
-    def generate_forensic_content(city, service):
+    def generate_forensic_content(city, service, related_links=[]):
         """
         Generates a hyper-technical, forensic-grade SEO post following the user's high-quality template.
         """
@@ -102,6 +102,13 @@ class ForensicEngine:
             <p style="margin-top: 2rem; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
                 <strong>Certifications:</strong> {", ".join(swarm_skills.CERTIFICATIONS)}
             </p>
+        </section>
+
+        <section style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="color: var(--gold);">Related Forensic Intelligence</h3>
+            <ul style="list-style: none; padding: 0;">
+                {" ".join([f'<li style="margin-bottom: 0.5rem;">&rarr; <a href="{link["url"]}">{link["title"]}</a></li>' for link in related_links])}
+            </ul>
         </section>
 
         <p style="margin-top: 4rem;"><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
