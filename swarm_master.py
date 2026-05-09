@@ -1,41 +1,32 @@
-import os
 import time
 import subprocess
-from swarm_execute import generate_post, BLOG_POSTS
+import os
+
+SCRIPTS = [
+    "swarm_execute.py",      # Generate the blog posts
+    "blog_index_generator.py", # Build the blog/index.html hub
+    "sitemap_generator.py",  # Update sitemap.xml
+    "swarm_push.py"         # Push to GitHub
+]
 
 WEBSITE_DIR = r"C:\Users\Gary\.gemini\antigravity\scratch\Websites"
 
-def run_scout():
-    print("--- [PHASE 1] RUNNING HERMES INTELLIGENCE SCOUT ---")
-    subprocess.run("node hermes_scout.js", shell=True, cwd=WEBSITE_DIR)
-
-def run_generation():
-    print("--- [PHASE 2] GENERATING RICH FORENSIC CLUSTERS ---")
-    # For a real 24/7 loop, we would parse the fresh output from hermes_scout.js
-    # For now, we process our authoritative BLOG_POSTS list
-    for p in BLOG_POSTS:
-        generate_post(p)
-
-def run_push():
-    print("--- [PHASE 3] DEPLOYING LIVE TO GITHUB/CLOUDFLARE ---")
-    subprocess.run("python swarm_push.py", shell=True, cwd=WEBSITE_DIR)
-
-def eternal_loop():
-    print("--- INITIALIZING ETERNAL SWARM LOOP (24/7 AUTONOMOUS MODE) ---")
-    iteration = 1
+def run_master():
+    print("=== STARTING AUTONOMOUS FORENSIC SWARM MASTER ===")
+    
     while True:
-        print(f"\n=== SWARM ITERATION #{iteration} | {time.ctime()} ===")
+        for script in SCRIPTS:
+            print(f"\n>>> RUNNING: {script}")
+            try:
+                # Use absolute path for safety
+                script_path = os.path.join(WEBSITE_DIR, script)
+                subprocess.run(["python", script_path], check=True)
+            except Exception as e:
+                print(f"FAILED TO RUN {script}: {e}")
         
-        run_scout()
-        run_generation()
-        run_push()
-        
-        print(f"\n--- ITERATION #{iteration} COMPLETE. GOING INTO STEALTH SCOUTING MODE ---")
-        iteration += 1
-        
-        # Wait for 1 hour before the next scout/deploy cycle
-        # (Reduced to 30 seconds for the initial verification run)
-        time.sleep(30)
+        print("\n=== SWARM CYCLE COMPLETE. SLEEPING FOR 30 MINUTES ===")
+        # Sleeping for 30 mins to avoid GitHub push limits but keep it fresh
+        time.sleep(1800)
 
 if __name__ == "__main__":
-    eternal_loop()
+    run_master()
