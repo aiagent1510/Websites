@@ -1,3 +1,6 @@
+import datetime
+import swarm_skills
+
 class ForensicEngine:
     @staticmethod
     def generate_forensic_content(city, service):
@@ -90,7 +93,18 @@ class ForensicEngine:
             </div>
         </div>
 
-        <p><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
+        <section style="margin-top: 4rem; border: 1px solid rgba(245, 158, 11, 0.2); padding: 2rem; border-radius: 12px; background: rgba(245, 158, 11, 0.05);">
+            <h3 style="margin-top: 0; color: var(--gold);">Technical Competency Verification</h3>
+            <p>This audit was performed by Gary Pearce, leveraging the following core engineering skills:</p>
+            <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                {" ".join([f'<li style="color: #fff; font-size: 0.9rem;">✅ <strong>{s}</strong></li>' for s in swarm_skills.SKILLS.get('CCTV', [])[:4]])}
+            </ul>
+            <p style="margin-top: 2rem; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <strong>Certifications:</strong> {", ".join(swarm_skills.CERTIFICATIONS)}
+            </p>
+        </section>
+
+        <p style="margin-top: 4rem;"><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
         '''
         return content
 
