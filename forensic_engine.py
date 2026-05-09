@@ -11,7 +11,7 @@ class ForensicEngine:
         service_proper = service.replace("-", " ").title()
         
         content = f'''
-        <p><strong>TL;DR:</strong> Professional {service_proper} in {city} is undergoing a paradigm shift in 2026. This guide details the forensic-grade standards required for high-security environments, covering hardware integration, protocol encryption, and local {city} compliance standards.</p>
+        <p><strong>TL;DR:</strong> Professional {service_proper} in {city} is undergoing a paradigm shift in 2026. This guide details the forensic-grade standards required for high-security environments, covering hardware integration, protocol encryption, and local {city} compliance standards. For a broader overview of our engineering standards, explore our other <a href="{related_links[0]["url"] if related_links else "index.html"}">{related_links[0]["title"] if related_links else "technical audits"}</a>.</p>
 
         <h2>{service_proper} Implementation Standards {city} 2026</h2>
         <p>In the current security landscape, baseline installations are no longer sufficient. To achieve true resilience, systems must be architected with 10Gbps backbones and sub-ms latency triggers.</p>
@@ -44,7 +44,7 @@ class ForensicEngine:
         </table>
 
         <h3>Forensic Implementation Strategy</h3>
-        <p>Our methodology for {city} properties focuses on total system integrity. When deploying {service_proper}, we ensure that the wireless alarm backbone—typically operating at 868MHz—is shielded against local RF interference. This is particularly critical in urban areas like {city}, where high-density wireless traffic can compromise standard systems.</p>
+        <p>Our methodology for {city} properties focuses on total system integrity. When deploying {service_proper}, we ensure that the <a href="{related_links[1]["url"] if len(related_links)>1 else "index.html"}">{related_links[1]["title"] if len(related_links)>1 else "wireless alarm backbone"}</a>—typically operating at 868MHz—is shielded against local RF interference. This is particularly critical in urban areas like {city}, where high-density wireless traffic can compromise standard systems.</p>
 
         <h2>DIY vs Professional Forensic Setup</h2>
         <table>
