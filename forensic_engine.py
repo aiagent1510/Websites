@@ -1,29 +1,101 @@
 class ForensicEngine:
     @staticmethod
-    def get_prompt(question, pillars):
-        return f'''
-        You are a Master Forensic SEO Expert with 20 years experience in UK security. 
-        Write a hyper-technical, forensic-grade audit answering: "{question}"
+    def generate_forensic_content(city, service):
+        """
+        Generates a hyper-technical, forensic-grade SEO post following the user's high-quality template.
+        """
+        # Logic to handle variations in service terminology
+        service_proper = service.replace("-", " ").title()
         
-        RULES:
-        1. NO FILLER: Start with technical facts.
-        2. ENTITY DENSITY: Mention Ajax Hub 2 Plus, Hikvision ColorVu G2, Dahua TiOC 2.0, Cat7 LSZH.
-        3. TECHNICAL DEPTH: Talk about bitrates, throughput, and Grade 3 compliance.
-        
-        STRUCTURE:
-        - <h2> {question}
-        - <p> Technical opening.
-        - [INSERT_TABLE_HERE] - Technical spec table.
-        - <h3> Forensic Implementation Strategy
-        - <p> Installation methodology.
-        - <h3> The 2026 Verdict
-        - <p> Authority recommendation.
-        
-        [INSERT_SCHEMA_HERE] - JSON-LD FAQ schema.
+        content = f'''
+        <p><strong>TL;DR:</strong> Professional {service_proper} in {city} is undergoing a paradigm shift in 2026. This guide details the forensic-grade standards required for high-security environments, covering hardware integration, protocol encryption, and local {city} compliance standards.</p>
+
+        <h2>{service_proper} Implementation Standards {city} 2026</h2>
+        <p>In the current security landscape, baseline installations are no longer sufficient. To achieve true resilience, systems must be architected with 10Gbps backbones and sub-ms latency triggers.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Infrastructure Component</th>
+                    <th>2025 Legacy Standard</th>
+                    <th>2026 Forensic Standard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data Transmission</td>
+                    <td>Cat6 Copper</td>
+                    <td>Cat7 LSZH (S/FTP)</td>
+                </tr>
+                <tr>
+                    <td>Security Protocol</td>
+                    <td>WPA2 / Basic AES</td>
+                    <td>AES-128 Bit Dynamic Encryption</td>
+                </tr>
+                <tr>
+                    <td>Edge Processing</td>
+                    <td>Centralized NVR</td>
+                    <td>AI-Driven On-Device Analytics</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Forensic Implementation Strategy</h3>
+        <p>Our methodology for {city} properties focuses on total system integrity. When deploying {service_proper}, we ensure that the wireless alarm backbone—typically operating at 868MHz—is shielded against local RF interference. This is particularly critical in urban areas like {city}, where high-density wireless traffic can compromise standard systems.</p>
+
+        <h2>DIY vs Professional Forensic Setup</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>DIY Configuration</th>
+                    <th>Professional Forensic Setup</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Redundancy</td>
+                    <td>Single Point</td>
+                    <td>Multi-Path Failover</td>
+                </tr>
+                <tr>
+                    <td>Compliance</td>
+                    <td>Self-Certified</td>
+                    <td>SSAIB / Grade 3 Compliant</td>
+                </tr>
+                <tr>
+                    <td>Longevity</td>
+                    <td>2-3 Years</td>
+                    <td>7-10 Year Service Life</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>The 2026 Verdict</h3>
+        <p>For high-value properties in {city}, fragmenting your security architecture is a critical failure point. Total interlinking between your data backbone and your intrusion protocols is the only way to achieve Grade 3 compliance and ensure 24/7 intelligence monitoring.</p>
+
+        <h2>FAQ - {service_proper} {city}</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemtype="https://schema.org/Question">
+                <p><strong><span itemprop="name">Is wireless jamming a risk for {service_proper} in {city}?</span></strong></p>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p><span itemprop="text">In 2026, standard wireless systems are vulnerable to 868MHz jamming. Our forensic installations use multi-frequency hopping and encrypted protocols to negate this risk entirely.</span></p>
+                </div>
+            </div>
+            <div itemscope itemtype="https://schema.org/Question">
+                <p><strong><span itemprop="name">What is the cost of Grade 3 {service_proper} in {city}?</span></strong></p>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p><span itemprop="text">Technical audits and forensic-grade installations typically range from £400 to £1,200 depending on the complexity of the data backbone and required redundancy.</span></p>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
         '''
+        return content
 
     @staticmethod
-    def wrap_html(content, title, canonical_url, image_url=None):
+    def wrap_html(content, title, canonical_url):
         return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +115,6 @@ class ForensicEngine:
         p {{ margin-bottom: 1.5rem; font-size: 1.15rem; color: #cbd5e1; }}
         a {{ color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px dashed var(--gold); transition: 0.3s; }}
         a:hover {{ border-bottom-style: solid; background: rgba(245, 158, 11, 0.1); }}
-        .infographic {{ width: 100%; border-radius: 16px; border: 1px solid rgba(245, 158, 11, 0.3); margin: 3rem 0; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }}
         table {{ width: 100%; border-collapse: collapse; margin: 3rem 0; background: rgba(30, 41, 59, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }}
         th, td {{ padding: 1.2rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }}
         th {{ background: rgba(245, 158, 11, 0.15); color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }}
@@ -57,12 +128,9 @@ class ForensicEngine:
             <div class="forensic-stamp">Verified Forensic Audit 2026</div>
             <h1>{title}</h1>
         </header>
-        
         <article>
-            {f'<img src="../{image_url}" class="infographic" alt="{title}">' if image_url else ''}
             {content}
         </article>
-        
         <footer style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
             <p style="color: var(--muted);">Gary Pearce Home Services | Engineering Excellence Since 2004</p>
         </footer>
