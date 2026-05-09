@@ -18,7 +18,14 @@ def run_master():
         for script in SCRIPTS:
             print(f"\n>>> RUNNING: {script}")
             try:
-                # Use absolute path for safety
+                # 1. Special Sync for Cloudflare (Root to Public)
+                if script == "swarm_push.py":
+                    print("--- SYNCING ROOT TO PUBLIC FOR CLOUDFLARE ---")
+                    subprocess.run(["cmd", "/c", "xcopy /Y index.html public\\"], cwd=WEBSITE_DIR)
+                    subprocess.run(["cmd", "/c", "xcopy /S /E /Y blog public\\blog\\"], cwd=WEBSITE_DIR)
+                    subprocess.run(["cmd", "/c", "xcopy /Y sitemap.xml public\\"], cwd=WEBSITE_DIR)
+                
+                # 2. Run the script
                 script_path = os.path.join(WEBSITE_DIR, script)
                 subprocess.run(["python", script_path], check=True)
             except Exception as e:
