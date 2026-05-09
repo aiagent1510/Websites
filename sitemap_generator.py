@@ -5,7 +5,7 @@ WEBSITE_DIR = r"C:\Users\Gary\Desktop\Websites" # FALLBACK to original if needed
 # But wait, I should use the path I've been using:
 WEBSITE_DIR = r"C:\Users\Gary\.gemini\antigravity\scratch\Websites"
 
-BASE_URL = "https://aiagent1510.github.io/Websites"
+BASE_URL = "https://gary-pearce-home-services.pages.dev"
 
 def generate_sitemap():
     print("--- REGENERATING SITEMAP.XML ---")

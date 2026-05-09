@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://aiagent1510.github.io/Websites/sitemap.xml
+
+Sitemap: https://gary-pearce-home-services.pages.dev/sitemap.xml
